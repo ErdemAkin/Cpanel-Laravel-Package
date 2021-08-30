@@ -32,9 +32,6 @@
         "url": "git@github.com:ErdemAkin/Cpanel-API-Library.git"
     }],
     "extra": {
-        "branch-alias": {
-            "dev-master": "main"
-        },
         "laravel": {
             "providers": [
                 "Laravel\\Cpanel\\CpanelServiceProvider"
