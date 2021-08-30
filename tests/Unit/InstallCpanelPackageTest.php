@@ -8,6 +8,20 @@ use Laravel\Cpanel\Tests\TestCase;
 
 class InstallCpanelPackageTest extends TestCase
 {
+    public function setUp(): void
+    {
+        parent::setUp();
+        
+        $this->cleanUp();
+    }
+    
+    public function tearDown(): void
+    {
+        parent::tearDown();
+        
+        $this->cleanUp();
+    }
+
     /** @test */
     public function the_install_command_copies_the_configuration()
     {
@@ -80,5 +94,12 @@ class InstallCpanelPackageTest extends TestCase
 
         // Clean up
         unlink(config_path('cpanel.php'));
+    }
+
+    private function cleanUp()
+    {
+       if (File::exists(config_path('blogpackage.php'))) {
+            unlink(config_path('blogpackage.php'));
+       } 
     }
 }
