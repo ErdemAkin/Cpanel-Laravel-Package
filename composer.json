@@ -1,0 +1,47 @@
+{
+    "name": "alierdemakin/cpanel-laravel-composer",
+    "description": "It is a user interface for Cpanel APIs developed as a Laravel package.",
+    "keywords": ["laravel", "cpanel"],
+    "authors": [
+        {
+            "name": "Ali Erdem Akın",
+            "email": "erdemakin09@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Laravel\\Cpanel\\": "src"
+        }
+    },
+    "require": {
+        "php": "^7.2|^8.0",
+        "ext-json": "*",
+        "illuminate/contracts": "^6.9|^7.0|^8.0",
+        "illuminate/database": "^6.9|^7.0|^8.0",
+        "illuminate/support": "^6.9|^7.0|^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.4.3"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:ErdemAkin/Cpanel-API-Library.git"
+        }
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "main"
+        },
+        "laravel": {
+            "providers": [
+                "Laravel\\Cpanel\\CpanelServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
