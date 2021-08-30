@@ -9,13 +9,17 @@ class CpanelServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'cpanel');
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'cpanel');
     }
 
     public function boot()
     {
         // Register the command
         if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__ . '/../config/config.php' => config_path('cpanel.php'),
+            ], 'config');
+
             $this->commands([
                 InstallCpanelPackage::class,
             ]);
