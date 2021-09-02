@@ -1,6 +1,11 @@
 <?php
 
 return [
-    'username' => '',
-    'password' => ''
+    'username'   => '',
+    'password'   => '',
+    'domain'     => '',
+
+    'prefix'     => 'cpanel',
+    'middleware' => ['web'],
+
 ];
