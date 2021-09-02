@@ -1,7 +1,7 @@
-<h1>Showing all Ftps</h1>
+<h1>Showing all Ftp Accounts</h1>
 
 @forelse ($ftpList as $ftp)
-    <li>{{ $ftp->username }}</li>
+    <li>{{ $ftp->user }}</li>
 @empty
-    <p> 'No ftps yet' </p>
+    <p> 'No ftp accounts yet' </p>
 @endforelse
